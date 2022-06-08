@@ -6,7 +6,10 @@ import javax.validation.constraints.NotBlank;
 
 public class RequisicaoNovoPedido {
 
-    @NotBlank
+    // Podemos customizar as mensagens, criando o arquivo message.properties em resources
+    // Adicionando a chave como no exemplo abaixo junto com sua tradução/versão
+
+    @NotBlank// Mensagem default de NotBlank ->
     private String nomeProduto;
     @NotBlank
     private String urlProduto;

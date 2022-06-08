@@ -20,7 +20,7 @@ public class PedidoController {
     private PedidoRepository pedidoRepository;
 
     @GetMapping("/formulario")
-    public String formulario() {
+    public String formulario(RequisicaoNovoPedido requisicaoNovoPedido) {
         // Retorna o html do formulario
         // Localizado em Resouces -> templates -> pedido -> formulario.html
         return "pedido/formulario";
