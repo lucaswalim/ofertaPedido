@@ -1,16 +1,14 @@
 package br.com.lucas.mvc.ofertaPedidos.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
 public class Pedido {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nomeProduto;
@@ -19,6 +17,17 @@ public class Pedido {
     private String urlProduto;
     private String urlImagem;
     private String descricao;
+
+    @Enumerated(EnumType.STRING)
+    private StatusPedido status;
+
+    public StatusPedido getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPedido status) {
+        this.status = status;
+    }
 
     public String getNomeProduto() {
         return nomeProduto;

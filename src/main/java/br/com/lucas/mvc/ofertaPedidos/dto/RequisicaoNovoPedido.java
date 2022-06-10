@@ -1,6 +1,7 @@
 package br.com.lucas.mvc.ofertaPedidos.dto;
 
 import br.com.lucas.mvc.ofertaPedidos.model.Pedido;
+import br.com.lucas.mvc.ofertaPedidos.model.StatusPedido;
 
 import javax.validation.constraints.NotBlank;
 
@@ -56,7 +57,7 @@ public class RequisicaoNovoPedido {
         pedido.setUrlProduto(urlProduto);
         pedido.setUrlImagem(urlImagem);
         pedido.setDescricao(descricao);
-
+        pedido.setStatus(StatusPedido.AGUARDANDO);
         return pedido;
     }
 }
